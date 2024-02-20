@@ -3,9 +3,9 @@ from django.urls import path, include
 from .views import PostViewSet, GroupViewSet, CommentViewSet, FollowViewSet
 
 router = routers.DefaultRouter()
-router.register(r'posts', PostViewSet, basename='posts')
-router.register(r'groups', GroupViewSet, basename='groups')
-router.register(r'follow', FollowViewSet, basename='followers')
+router.register('posts', PostViewSet, basename='posts')
+router.register('groups', GroupViewSet, basename='groups')
+router.register('follow', FollowViewSet, basename='followers')
 router.register(
     r'posts/(?P<post_id>\d+)/comments',
     CommentViewSet,
